@@ -1,9 +1,13 @@
+;****main.ahk
+;****IoTcat/ahk
+;===========================================
+
 ;Volume control, Alt+Scroll wheel (and Mbutton)
 Alt & WheelUp::Volume_Up
 Alt & WheelDown::Volume_Down
 Alt & MButton::Volume_Mute
 
-
+;============================================
 
 ^!H::GoSub,CheckActiveWindow
 CheckActiveWindow:
@@ -27,7 +31,7 @@ RegWrite, REG_DWORD, % RootKey, % SubKey, Hidden, 2
 PostMessage, 0x111, 41504,,, ahk_id %ID%
 Return
 
-
+;========================================
 
 ; Google Search highlighted text
 ^+c::
@@ -38,28 +42,26 @@ Return
  Return
 }
 
-
-
+;==========================================
 
 ; Empty trash
 #Del::FileRecycleEmpty ; win + del
 return
 
-
-
+;=========================================
 
 ; Always on Top
 ^SPACE:: Winset, Alwaysontop, , A ; ctrl + space
 Return
 
-
+;=========================================
 
 ;Suspend hotkeys
 !s::
 suspend, toggle
 return
 
-
+;=========================================
 
 ; Drag window anywhere
 Capslock & LButton::
