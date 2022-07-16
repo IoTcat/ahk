@@ -47,7 +47,7 @@ Return
 ;========================================
 
 ; Google Search highlighted text
-^+c::
+^#c::
 {
  Send, ^c
  Sleep 50
