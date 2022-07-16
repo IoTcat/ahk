@@ -7,8 +7,21 @@ Alt & WheelUp::Volume_Up
 Alt & WheelDown::Volume_Down
 Alt & MButton::Volume_Mute
 
+;===========================================
+
+;remapping Window Terminal Quake
+#`::
+process, exist, OpenConsole.exe
+if (!errorlevel) {
+	Run, wt -w _quake
+}
+else
+    Send, #+^!``
+return
+
 ;============================================
 
+;show/hide hidden files
 ^!H::GoSub,CheckActiveWindow
 CheckActiveWindow:
 ID := WinExist("A")
